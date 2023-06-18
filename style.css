@@ -1,0 +1,244 @@
+/* Import fonts*/
+@font-face {
+	font-family: "Alagard";
+	src: url(fonts/alagard.ttf) format('truetype');
+}
+@font-face {
+	font-family: "CooperBits";
+	src: url(fonts/CooperBits.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    background: #e4dfcd;
+    overflow: hidden;
+}
+
+.nav-container {
+    width: 100%;
+    position: relative;
+}
+
+.nav {
+    width: 95%;
+    margin: 0 auto;
+    padding: 2em 0;
+    display: flex;
+    border-bottom: 1px solid #282b33;
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item:nth-child(2) {
+    flex: 4;
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+    text-align: left;
+}
+
+.nav-item:last-child {
+    margin-left: auto;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #282b33;
+    font-family: "CooperBits", sans-serif;
+    transition: color 0.4s ease-in-out;
+    transition: transform .4s;
+	transition: 0.4s;
+    
+}
+
+.nav-logo a {
+    font-family: 'Alagard', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-cta a {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.nav-links a {
+    padding: 0 2em;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    background-color: #282b33;
+    border-radius: 200px;
+    color: #e4dfcd;
+    transition: .4s;
+    transform: scale(1.2);
+    font-size: 18px;
+}
+
+@media(max-width: 900px) {
+    .nav {
+        width: 100%;
+    }
+
+    .nav-links,
+    .nav-cta {
+        display: none;
+    }
+}
+
+.hero-container {
+    position: relative;
+    z-index: 10000;
+    width: 100%;
+}
+
+.hero > * 
+{
+    position: relative;
+}
+
+.hero {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4em 0;
+}
+
+h1 {
+    font-family: 'Alagard', sans-serif;
+    font-weight: 500;
+    font-size: 5vw;
+    color: #282b33;
+}
+
+.cta button {
+    background-color: #282b33;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin: 4em 0 0 0;
+    padding: 1.6em 3.2em;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Alagard', sans-serif;
+    transition: transform .4s;
+	transition: 0.4s;
+    
+}
+
+.cta button:hover {
+    background: #e4dfcd;
+    color: #282b33;
+    border: 1px solid #282b33;
+    transition: transform .4s;
+	transition: 0.4s;
+}
+
+p {
+    margin: 4em 0 0 0;
+    font-family: "CooperBits", sans-serif;
+    font-size: 14px;
+    color: #282b33;
+}
+
+.bg-gradient {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.blob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animate-blob 4s ease-in-out infinite;
+}
+
+@keyframes animate-blob {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+.blob-1 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 500px;
+    height: 500px;
+    background: url(1.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+    
+}
+
+.blob-2 {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 360px;
+    height: 360px;
+    background: url(2.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+    animation-delay: 1s;
+}
+
+.blob-3 {
+    position: absolute;
+    top: 20%;
+    right: 25%;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    animation-delay: 2s;
+}
+
+@media(max-width: 900px) {
+    
+    .blob-1,
+    .blob-2,
+    .blob-3{
+        display: none;
+    }
+ 
+}
+
+@media(max-width: 1530px) {
+    
+    .blob-1 {
+        top: 30%;
+        right: 10%;
+        width: 260px;
+        height: 260px; 
+    }
+
+    .blob-2 {
+        top: 50%;
+        right: 10%;
+        width: 180px;
+        height: 180px; 
+    }
+ 
+}
